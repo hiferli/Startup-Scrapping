@@ -1,4 +1,5 @@
 import os
+import time
 from bs4 import BeautifulSoup
 import requests
 import urllib.request
@@ -7,6 +8,9 @@ import urllib.request
 import DirectoryVariable
 
 def SlideCapture(url):
+
+    start_time = time.time()
+    
     document = BeautifulSoup(requests.get(url).text , 'html.parser');
     startupName = ((str(document.title.string)).split(' - ')[0])
 
@@ -26,4 +30,4 @@ def SlideCapture(url):
 
         index += 1;
 
-    print('All slide capture is successful for ' + startupName)
+    print(f'All Slides Captured for {startupName}. Total Execution Time for Slide Capture is {(time.time() - start_time)} seconds')
