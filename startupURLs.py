@@ -15,20 +15,19 @@ def getStartups():
 
     # Selenium Work Here
     driver.get(DirectoryVariable.url);
-
-
     time.sleep(DirectoryVariable.sleepDuration)
 
-    # Using BeautifulSoup using Selenuim
-    html = driver.page_source
-    document = BeautifulSoup(html , "html.parser");
-    numberOfStartups = numberOfStartups - 15
 
     # Extract more codes 
     while(numberOfStartups > 0):
         driver.find_element(By.CLASS_NAME , 'loadmore').click()
         time.sleep(DirectoryVariable.sleepDuration)
         numberOfStartups = numberOfStartups - 15
+
+    # Using BeautifulSoup using Selenuim
+    html = driver.page_source
+    document = BeautifulSoup(html , "html.parser");
+    numberOfStartups = numberOfStartups - 15
 
     html = driver.page_source
     document = BeautifulSoup(html, 'html.parser');
@@ -45,3 +44,4 @@ def getStartups():
     driver.quit();
     return DirectoryVariable.startups_links;
 
+print(getStartups())
