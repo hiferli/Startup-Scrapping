@@ -46,4 +46,3 @@ def SlideCapture(url):
     print(f'All Slides Captured for {startupName}.')
     Constants.totalTime = Constants.totalTime + (time.time() - start_time) 
     
-SlideCapture('https://startupdecks.co/bibles/sorare/')

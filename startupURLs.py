@@ -11,7 +11,7 @@ import time
 chromedriver_autoinstaller.install()
 driver = webdriver.Chrome(service=Service())
 
-def getStartups():
+def GetStartups():
     numberOfStartups = DirectoryVariable.numberOfStartups;
 
     # Selenium Work Here

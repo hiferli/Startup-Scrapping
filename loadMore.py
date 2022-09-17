@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
 
-def getMoreStartups():
+def GetMoreStartups():
     chromedriver_autoinstaller.install()
     driver = webdriver.Chrome(service=Service())
 
