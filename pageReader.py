@@ -28,8 +28,11 @@ def SlideCapture(url):
         if link != '':
             # urllib.request.urlretrieve(link, "C:/Users/ADMIN/Desktop/Startup Decks/Images/Sample_" + str(index) + ".jpg")
             slideSaveDirectory = saveLocation + "/" + startupName + "-" + str(index) + ".jpg";
-            urllib.request.urlretrieve(link, slideSaveDirectory)
-
+            try:
+                urllib.request.urlretrieve(link, slideSaveDirectory)
+            except:
+                pass;
+                
         index += 1;
 
     print(f'All Slides Captured for {startupName}. Total Execution Time for Slide Capture is {(time.time() - start_time)} seconds')
