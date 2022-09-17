@@ -30,10 +30,6 @@ def GetStartups():
     document = BeautifulSoup(html , "html.parser");
     numberOfStartups = numberOfStartups - 15
 
-    html = driver.page_source
-    document = BeautifulSoup(html, 'html.parser');
-    # print(document)
-
     # Main code here
     startup_cards = document.find_all(class_ = 'deck_list_item');
     # print((startup_cards));
