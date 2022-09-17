@@ -24,9 +24,11 @@ def SlideCapture(url):
     index = 1;
     for image in images:
         link = image.contents[1]['src']
-        # urllib.request.urlretrieve(link, "C:/Users/ADMIN/Desktop/Startup Decks/Images/Sample_" + str(index) + ".jpg")
-        slideSaveDirectory = saveLocation + "/" + startupName + "-" + str(index) + ".jpg";
-        urllib.request.urlretrieve(link, slideSaveDirectory)
+        
+        if link != '':
+            # urllib.request.urlretrieve(link, "C:/Users/ADMIN/Desktop/Startup Decks/Images/Sample_" + str(index) + ".jpg")
+            slideSaveDirectory = saveLocation + "/" + startupName + "-" + str(index) + ".jpg";
+            urllib.request.urlretrieve(link, slideSaveDirectory)
 
         index += 1;
 

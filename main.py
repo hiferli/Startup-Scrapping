@@ -29,7 +29,7 @@ startup_cards = document.find_all(class_ = 'deck_list_item');
 # print((startup_cards));
 
 for startup in startup_cards:
-    print(startup.find('a').get('href'))
+    pageReader.SlideCapture(startup.find('a').get('href'))
 
 driver.quit();
 
