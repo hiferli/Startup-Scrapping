@@ -25,10 +25,10 @@ def getStartups():
     numberOfStartups = numberOfStartups - 15
 
     # Extract more codes 
-
-    driver.find_element(By.CLASS_NAME , 'loadmore').click()
-    time.sleep(DirectoryVariable.sleepDuration)
-    numberOfStartups = numberOfStartups - 15
+    while(numberOfStartups > 0):
+        driver.find_element(By.CLASS_NAME , 'loadmore').click()
+        time.sleep(DirectoryVariable.sleepDuration)
+        numberOfStartups = numberOfStartups - 15
 
     html = driver.page_source
     document = BeautifulSoup(html, 'html.parser');
