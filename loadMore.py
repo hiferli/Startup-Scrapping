@@ -19,5 +19,9 @@ time.sleep(DirectoryVariable.sleepDuration)
 html = driver.page_source.encode('utf-8').strip()
 document = BeautifulSoup(html , "html.parser");
 
+# print(document.find(class_ = 'loadmore'))
+(driver.find_element(By.CLASS_NAME , 'loadmore').click())
+time.sleep(DirectoryVariable.sleepDuration)
+print(driver.page_source.encode('utf-8').strip())
 
 driver.quit();
