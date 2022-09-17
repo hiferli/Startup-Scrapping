@@ -13,8 +13,13 @@ def SlideCapture(url):
 
     startup_slides_link = []
 
-    document = BeautifulSoup(requests.get(url).text , 'html.parser');
-    
+    try:
+        document = BeautifulSoup(requests.get(url).text , 'html.parser');
+        # Can use the line below as well... However it may cause security breach
+        # document = BeautifulSoup(requests.get(url , verify=False).text , 'html.parser');
+    except:
+        print("Internal Server Issues. Please try after some time")
+
     images = document.find_all(class_ = "grid-60 tablet-grid-50 mobile-grid-100 slide_image");
     for image in images:
         link = image.contents[1]['src']
