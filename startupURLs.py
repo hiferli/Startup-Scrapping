@@ -1,4 +1,5 @@
 import DirectoryVariable
+import Constants
 
 from selenium import webdriver   
 import chromedriver_autoinstaller
@@ -14,7 +15,7 @@ def getStartups():
     numberOfStartups = DirectoryVariable.numberOfStartups;
 
     # Selenium Work Here
-    driver.get(DirectoryVariable.url);
+    driver.get(Constants.url);
     time.sleep(DirectoryVariable.sleepDuration)
 
 
@@ -39,9 +40,8 @@ def getStartups():
 
     for startup in startup_cards:
         # pageReader.SlideCapture(startup.find('a').get('href'))
-        DirectoryVariable.startups_links.add(startup.find('a').get('href'));
+        Constants.startups_links.add(startup.find('a').get('href'));
 
     driver.quit();
-    return DirectoryVariable.startups_links;
+    return Constants.startups_links;
 
-print(getStartups())

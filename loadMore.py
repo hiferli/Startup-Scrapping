@@ -1,4 +1,5 @@
 import DirectoryVariable
+import Constants
 
 from selenium import webdriver   
 import chromedriver_autoinstaller
@@ -11,7 +12,7 @@ def getMoreStartups():
     chromedriver_autoinstaller.install()
     driver = webdriver.Chrome(service=Service())
 
-    driver.get(DirectoryVariable.url);
+    driver.get(Constants.url);
 
     time.sleep(DirectoryVariable.sleepDuration)
 
