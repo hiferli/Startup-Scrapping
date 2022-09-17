@@ -1,0 +1,5 @@
+Don't delete this folder or even this file.
+This is the folder where all the slides are going to be saved into.
+
+Thank You for your kind corporation
+(Else the code would throw errors and you would'nt have any idea how to deal with them 😊)
