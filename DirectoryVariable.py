@@ -2,4 +2,6 @@
 fileLocation = r'C:/Users/ADMIN/Desktop/Startup Decks/'
 driverPath = r'C:\Users\ADMIN\Desktop\Startup Decks\Drivers\chromedriver.exe'
 
+url = r'https://startupdecks.co/decks/';
+
 startups_links = set();

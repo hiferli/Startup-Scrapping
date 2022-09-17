@@ -12,32 +12,24 @@ import time
 chromedriver_autoinstaller.install()
 driver = webdriver.Chrome(service=Service())
 
-url = r'https://startupdecks.co/decks/';
+def getStartups():
+    None;
+    # Selenium Work Here
+    driver.get(DirectoryVariable.url);
 
-# Selenium Work Here
-driver.get(url);
 
+    time.sleep(5)
 
-time.sleep(5)
+    # Using BeautifulSoup using Selenuim
+    html = driver.page_source.encode('utf-8').strip()
+    document = BeautifulSoup(html , "html.parser");
 
-# Using BeautifulSoup using Selenuim
-html = driver.page_source.encode('utf-8').strip()
-document = BeautifulSoup(html , "html.parser");
+    # Main code here
+    startup_cards = document.find_all(class_ = 'deck_list_item');
+    # print((startup_cards));
 
-# Main code here
-startup_cards = document.find_all(class_ = 'deck_list_item');
-# print((startup_cards));
+    for startup in startup_cards:
+        # pageReader.SlideCapture(startup.find('a').get('href'))
+        DirectoryVariable.startups_links.add(startup.find('a').get('href'));
 
-for startup in startup_cards:
-    # pageReader.SlideCapture(startup.find('a').get('href'))
-    DirectoryVariable.startups_links.add(startup.find('a').get('href'));
-
-print(DirectoryVariable.startups_links);
-
-driver.quit();
-
-# url_1 = r'https://startupdecks.co/bibles/zoe-financial/';
-# url_2 = r'https://startupdecks.co/bibles/zestful/';
-
-# pageReader.SlideCapture(url_1)
-# pageReader.SlideCapture(url_2)
+    driver.quit();
