@@ -6,6 +6,7 @@ import urllib.request
 
 # Directory for File Location 
 import DirectoryVariable
+import Constants
 
 def SlideCapture(url):
 
@@ -35,4 +36,6 @@ def SlideCapture(url):
                 
         index += 1;
 
-    print(f'All Slides Captured for {startupName}. Total Execution Time for Slide Capture is {(time.time() - start_time)} seconds')
+    print(f'All Slides Captured for {startupName}.')
+    Constants.totalTime = Constants.totalTime + (time.time() - start_time) 
+    
