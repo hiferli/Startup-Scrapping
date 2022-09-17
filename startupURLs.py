@@ -1,9 +1,6 @@
-from xml.dom.minidom import DocumentFragment
-import pageReader
 import DirectoryVariable
 
 from selenium import webdriver   
-from selenium.webdriver.common.by import By
 import chromedriver_autoinstaller
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
@@ -18,7 +15,7 @@ def getStartups():
     driver.get(DirectoryVariable.url);
 
 
-    time.sleep(5)
+    time.sleep(DirectoryVariable.sleepDuration)
 
     # Using BeautifulSoup using Selenuim
     html = driver.page_source.encode('utf-8').strip()
@@ -33,3 +30,5 @@ def getStartups():
         DirectoryVariable.startups_links.add(startup.find('a').get('href'));
 
     driver.quit();
+
+    return set(DirectoryVariable.startups_links)
