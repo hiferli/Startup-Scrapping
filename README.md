@@ -68,6 +68,15 @@ To run the program:
 python main.py
 ```
 
+## Developers Optioms
+By default, running the script would return you Slide Captures of just 5 Startups.
+To increase/decrease the number of Startup's Slide Capture, do the following steps:
+
+- Open the Directory of your clone repository.
+- Go to the ```DirectoryVariable.py``` file.
+- You will find the ```numberOfStartups``` variable. 
+- Change the value of the variable with any **integer** of your preference.
+
 ## Contributing
 
 Contributions are always welcome!
