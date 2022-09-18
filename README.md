@@ -58,3 +58,12 @@ source Environment/Scripts/bin/activate
 pip install -r requirements.txt
 ```
 - You're all set to go now.
+
+## Run the Application
+To run the program:
+- Open Command Prompt in the same directory as the project
+- Run the command below:
+
+```python
+python main.py
+```
