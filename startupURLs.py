@@ -34,10 +34,15 @@ def GetStartups():
     startup_cards = document.find_all(class_ = 'deck_list_item');
     # print((startup_cards));
 
+    countOfStartups = 0;
     for startup in startup_cards:
-        # pageReader.SlideCapture(startup.find('a').get('href'))
-        Constants.startups_links.add(startup.find('a').get('href'));
-
+        if countOfStartups <= DirectoryVariable.numberOfStartups:
+            # pageReader.SlideCapture(startup.find('a').get('href'))
+            Constants.startups_links.add(startup.find('a').get('href'));
+            countOfStartups = countOfStartups + 1;
+        else:
+            break;
+            
     driver.quit();
     return Constants.startups_links;
 
