@@ -89,3 +89,13 @@ To get a better understanding of the major techstacks involved while making this
 
 ## Connect with Me 🔗 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joshiishaan/)
+
+## Support/Feedback
+
+For Support/Feedback or any queries regarding the project, email joshi.ishaan.2001@gmail.com.
+I'll be more than happy to hear from you about this project and retrospect about the various parameters where I can improve the project.
+## Acknowledgements
+
+ - [Startup Decks](https://startupdecks.co/decks/)
+ - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+ - [Selenium](https://www.selenium.dev/) 
