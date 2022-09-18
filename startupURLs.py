@@ -17,7 +17,11 @@ def GetStartups():
     # Selenium Work Here
     driver.get(Constants.url);
     time.sleep(DirectoryVariable.sleepDuration)
-
+    
+    # Using BeautifulSoup using Selenuim
+    html = driver.page_source
+    document = BeautifulSoup(html , "html.parser");
+    numberOfStartups = numberOfStartups - 15
 
     # Extract more codes 
     while(numberOfStartups > 0):
@@ -25,10 +29,6 @@ def GetStartups():
         time.sleep(DirectoryVariable.sleepDuration)
         numberOfStartups = numberOfStartups - 15
 
-    # Using BeautifulSoup using Selenuim
-    html = driver.page_source
-    document = BeautifulSoup(html , "html.parser");
-    numberOfStartups = numberOfStartups - 15
 
     # Main code here
     startup_cards = document.find_all(class_ = 'deck_list_item');
@@ -42,7 +42,7 @@ def GetStartups():
             countOfStartups = countOfStartups + 1;
         else:
             break;
-            
+
     driver.quit();
     return Constants.startups_links;
 

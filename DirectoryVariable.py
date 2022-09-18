@@ -1,7 +1,5 @@
 import os
 
-print(os.getcwd())
-
 fileLocation = os.path.join(os.getcwd() , r'Slides')
 if not os.path.exists(fileLocation):
     os.makedirs(fileLocation)
