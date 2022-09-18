@@ -24,3 +24,37 @@ This project is made using **Python**. The various Python libraries used for the
 - **HTML Parsing:** html5lib
 - **URL Calling and Requests:** urllib3, requests
 - **Encodings:** webencodings, charset-normalizer
+
+## Installation
+
+Since the project is built completely in Python, installing the project is pretty simple.
+Follow the steps below
+
+- Open your Terminal.
+- Change the current working directory to the location where you want the cloned directory.
+- Run the command below to clone the project:
+
+```pip
+git clone https://github.com/hiferli/Startup-Scrapping.git
+```
+- After the cloning is done, use the following code to enter the current working directory
+```pip
+cd Startup-Scrapping
+```
+- You can execute the code after this step. However, to run the code with optimum dependancies, install ```virtualenvironment``` using the code below:
+```pip
+pip install virtualenv
+```
+- Following this, create a virtual environment using the code below
+```pip
+virtualenv Environment
+```
+- Run the code below to activate the environment
+```pip
+source Environment/Scripts/bin/activate
+```
+- Install the dependancies
+```pip
+pip install -r requirements.txt
+```
+- You're all set to go now.
