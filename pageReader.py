@@ -31,7 +31,10 @@ def SlideCapture(url):
         print(f"No slides found for {startupName}. Heading towards the next startup...")
         return
 
-    saveLocation = DirectoryVariable.fileLocation + startupName + "/"
+    # saveLocation = DirectoryVariable.saveLocation + startupName + "/"
+    saveLocation = os.path.join(DirectoryVariable.fileLocation , startupName)
+    if not os.path.exists(saveLocation):
+        os.makedirs(saveLocation)
 
     if not os.path.isdir(saveLocation):
         os.makedirs(saveLocation)
