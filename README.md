@@ -67,3 +67,10 @@ To run the program:
 ```python
 python main.py
 ```
+
+## Contributing
+
+Contributions are always welcome!
+
+Please fork the project in your account and create a local repository of the same. 
+Create pull requests for any Contributions. I'll be more than happy to add authors to the repository.
