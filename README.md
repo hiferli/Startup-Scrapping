@@ -74,3 +74,18 @@ Contributions are always welcome!
 
 Please fork the project in your account and create a local repository of the same. 
 Create pull requests for any Contributions. I'll be more than happy to add authors to the repository.
+
+## Personal References
+
+This is the first time I have been using Selenium and BeautifulSoup4.
+To get a glimpse of how things work over here and how to go through Web Scrapping, I have refered a few online tutorials. 
+
+To get a better understanding of the major techstacks involved while making this project, I have created some small projects. These mini-projects are mentioned below:
+
+- [Sundar-Soup](https://github.com/hiferli/Sundar-Soup)
+
+- [GPU-Price-Tracker](https://github.com/hiferli/GPU-Price-Tracker)
+
+
+## Connect with Me 🔗 
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joshiishaan/)
