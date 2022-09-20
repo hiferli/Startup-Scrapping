@@ -79,6 +79,8 @@ To increase/decrease the number of Startup's Slide Capture, do the following ste
 
 ## Contributing
 
+Special mention to @lizzzshan for helping me out in the logo color changes :)
+
 Contributions are always welcome!
 
 Please fork the project in your account and create a local repository of the same. 
