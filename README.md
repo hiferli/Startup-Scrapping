@@ -1,5 +1,5 @@
 
-![Logo](https://startupdecks.co/wp-content/uploads/2020/08/logo-5.svg)
+![Logo](https://raw.githubusercontent.com/hiferli/Startup-Scrapping/main/logo.png)
 
 
 # Startup Scrapping
